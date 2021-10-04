@@ -25,5 +25,18 @@ const { coloursByPopularity: [hondaTopColour] } = honda;
 const {speedStats: {topSpeed: teslaTopSpeed}} = tesla;
 const { coloursByPopularity: [teslaTopColour] } = tesla;
 
+// You can use these lines to reduce repitition
+// const [honda, tesla] = cars;
+// const [
+//   {
+//     speedStats: { topSpeed: hondaTopSpeed },
+//     coloursByPopularity: [hondaTopColour]
+//   },
+//   {
+//     speedStats: { topSpeed: teslaTopSpeed },
+//     coloursByPopularity: [teslaTopColour]
+//   }
+// ] = [honda, tesla];
+
 export default cars;
 export { honda, hondaTopSpeed, hondaTopColour, tesla, teslaTopSpeed, teslaTopColour };
