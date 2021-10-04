@@ -1,9 +1,3 @@
-let honda, tesla;
-let hondaTopSpeed, hondaTopColour;
-let teslaTopSpeed, teslaTopColour;
-let restHondaColour;
-let restTeslaColour;
-
 const cars = [
   {
     model: "Honda Civic",
@@ -25,11 +19,11 @@ const cars = [
   }
 ];
 
-[honda, tesla] = cars;
-hondaTopSpeed = honda.speedStats.topSpeed;
-[hondaTopColour, ...restHondaColour] = honda.coloursByPopularity;
-teslaTopSpeed = tesla.speedStats.topSpeed;
-[teslaTopColour, ...restTeslaColour] = tesla.coloursByPopularity;
+const [honda, tesla] = cars;
+const {speedStats: {topSpeed: hondaTopSpeed}} = honda;
+const { coloursByPopularity: [hondaTopColour] } = honda;
+const {speedStats: {topSpeed: teslaTopSpeed}} = tesla;
+const { coloursByPopularity: [teslaTopColour] } = tesla;
 
 export default cars;
 export { honda, hondaTopSpeed, hondaTopColour, tesla, teslaTopSpeed, teslaTopColour };
